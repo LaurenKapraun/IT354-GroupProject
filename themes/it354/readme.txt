@@ -1,6 +1,6 @@
 === IT354 ===
 
-Contributors: automattic
+Contributors: Lauren Kapraun, Karthik Kandula, & Prathibha Nallamasa
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 Requires at least: 4.5

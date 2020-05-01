@@ -1,19 +1,16 @@
 /*!
 Theme Name: IT354
-Theme URI: http://underscores.me/
-Author: Underscores.me
-Author URI: http://underscores.me/
-Description: Description
+Theme URI: https://github.com/LaurenKapraun/IT354-GroupProject
+Author: Lauren Kapraun, Karthik Kandula, & Prathibha Nallamasa
+Author URI: https://github.com/LaurenKapraun/IT354-GroupProject
+Description: This theme was created for our IT 354 Group Project. It implements an API that displays restaurant information based on a user's search. The IT354 theme is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: it354
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-IT354 is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+This theme, like WordPress, is licensed under the GPL. 
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -40,6 +37,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Media
 	## Captions
 	## Galleries
+# CUSTOM
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
@@ -63,21 +61,12 @@ html {
 	 ========================================================================== */
 
 /**
- * Remove the margin in all browsers.
+ * Remove the margin in all browsers & Set Height to 100%
  */
 
-body {
+body, html{
 	margin: 0;
-}
-
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-
-h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
+	height: 100%;
 }
 
 /* Grouping content
@@ -637,10 +626,8 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+	display: grid;
+	justify-items: right;
 }
 
 .main-navigation ul {
@@ -686,6 +673,10 @@ a:hover, a:active {
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+}
+
+.current-menu-item a {
+    border-bottom: 2px solid white;
 }
 
 /* Small menu. */
@@ -982,4 +973,204 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+# CUSTOM
+--------------------------------------------------------------*/
+.max-screen-size {
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 1em;
+}
+
+header#masthead.masthead-home {
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url(https://it354.laurenkapraun.com/wp-content/uploads/2020/04/table-3510523-scaled.jpg); 
+	height: 70%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	background-attachment: fixed;
+}
+
+header#masthead {
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url(https://it354.laurenkapraun.com/wp-content/uploads/2020/04/table-3510523-scaled.jpg); 
+	height: 20%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	background-attachment: fixed;
+}
+
+#masthead .max-screen-size:nth-child(1) {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	align-items: center;
+}
+
+.masthead-home .max-screen-size:nth-child(1) {
+	border-bottom: 2px solid rgba(255,255,255, .4);
+}
+
+.site-title a, .site-title a:visited, .site-title a:hover, .site-title a:focus, .site-title a:active{
+	color: #fff;
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 1.5em;
+	margin: 0;
+}
+
+#content {
+	padding: 1em;
+	max-width: 1500px;
+	margin: 0 auto;
+}
+
+nav a,  nav a:hover, nav a:focus, nav a:visited, nav a:active{
+	color: #fff;
+	text-decoration: none;
+	padding: .5em;
+	text-align: right;
+}
+
+.header_search {
+	width: 85%;
+	background: linear-gradient(to bottom right, rgba(166, 172, 144, .8), rgba(166, 157, 38, .7));
+	/*background: linear-gradient(to bottom right, rgba(255, 255, 255, .9), rgba(166, 157, 38, .7));*/
+	margin-top: .5em;
+	padding: .3em;
+}
+
+.header_search h2 {
+	text-align: center;
+	font-size: 1.2em;
+	margin: .2em;
+	padding: 0;
+	color: #000;
+}
+
+.header_search input[type=text] {
+	font-size: 1em;
+	padding: .2em;
+	width: 100%;
+	border: none;
+}
+
+.header_search .search-container button {
+	background: transparent;
+	font-size: 1.5em;
+	border: none;
+	cursor: pointer;
+	text-align: right;
+}
+
+.search-container {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	display: grid;
+	grid-template-columns: 4fr 1fr;
+}
+
+.tab {
+	overflow: hidden;
+}
+
+button.tablinks {
+	background: transparent;
+}
+
+.tab button {
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: .8em;
+	transition: 0.3s;
+	font-size: 1em;
+	border-radius: 0;
+}
+
+.tab button.active {
+	background-color: #fff;
+}
+
+.tabcontent {
+	display: none;
+	padding: .5em;
+    border: 1px solid #fff;
+    background: #fff;
+    border-top: none;
+}
+
+@media screen and (min-width: 850px) {
+	h1 {
+		font-size: 2em;
+	}
+	
+	nav a {
+		font-size: 1.2em;
+	}
+	
+	header#masthead.masthead-home {
+		height: 60%;
+	}
+	
+	.header_search {
+		width: 85%;
+		margin-top: 2em;
+		padding: 1em;
+	}
+	
+	.header_search h2 {
+		font-size: 2em;
+		margin: .5em;
+	}
+	
+	.tab button {
+		padding: 1em;
+		font-size: 1.2em;
+	}
+	
+	.tabcontent {
+		display: none;
+		padding: 1em;
+	}
+	
+	.header_search input[type=text] {
+		font-size: 1.2em;
+		padding: .5em;
+	}
+	
+	.flex-container {
+		grid-template-columns: 1fr 3fr;
+		grid-column-gap: 1em;
+		text-align: left !important;
+	}
+}
+
+.flex-container {
+    display: none;
+    border-bottom: solid;
+    border-image-source: linear-gradient(to right,transparent,rgba(166, 157, 38, .2),rgba(166, 157, 38, .4),rgba(166, 157, 38, .4),rgba(166, 157, 38, .6),rgba(166, 157, 38, .8),rgb(166, 157, 38),rgba(166, 157, 38,.8),rgba(166, 157, 38, .6),rgba(166, 157, 38, .4),rgba(166, 157, 38, .4),rgba(166, 157, 38, .2), transparent);
+    border-image-slice: 1;
+    border-width: 1.5px;
+    margin-bottom: 1em;
+    align-items: center;
+	text-align: center;
+}
+
+.flex-container:last-child {
+	border-bottom: none;
+}
+
+.res_name {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Domine";
+    letter-spacing: 1.5px;
+    font-size: 1.3em;
 }
